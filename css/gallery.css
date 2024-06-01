@@ -1,0 +1,578 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-size: 16px; */
+    font-family: monospace, sans-serif;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+
+/* ================ This is for Navigation bar ==================== */
+
+.navigation {
+    width: 100%;
+    height: 80px;
+    background-color: #aaa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    position: absolute;
+    z-index: 1;
+}
+
+.navigation .logo {
+    width: 15%;
+    cursor: pointer;
+    mix-blend-mode: darken;
+    
+}
+
+.search {
+    width: 20%;
+    height: 35px;
+    background-color: #fff;
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 6px 6px 10px -1px #111;
+}
+
+.search>input {
+    width: 10%;
+    height: 100%;
+    font-weight: 500;
+
+}
+
+.search>.search-field {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    outline: none;
+    padding: 0 5px 0 30px;
+}
+
+.search>i {
+    width: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.search>::placeholder {
+    color: #000;
+
+}
+
+
+.menu{
+    display: flex;
+    align-items: center;
+    
+}
+
+.menu>ul{
+    list-style: none;
+    display: flex;  
+}
+
+.menu ul li{
+    margin: 0 16px;
+}
+
+.menu ul>li a{
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+    font-weight: 600;
+}
+.menu ul>li a:hover{
+
+   
+    opacity: 80%;
+}
+.menu ul>li a::before{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #eee;
+    position: absolute;
+    left: -3px;
+    bottom: -2px;
+    border-radius: 50px;
+    transition: .5s;
+}
+.menu ul>li a:hover::before,
+.menu ul>li a.active::before{
+    width: 110%;
+    opacity: 80%;
+}
+
+.login-signup-btnMain{
+    width: 90px;
+    height: 40px;
+    margin: 0 10px 0 60px;
+    border: 1.9px solid #444;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.login-signup-btn{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    outline: none;
+    background-color: #ddd;
+    color: #444;
+    border: 0;
+    overflow: none;    
+    cursor: pointer;
+    font-weight: 600;
+    
+}
+.login-signup-btn:hover{
+    opacity: 80%;
+    transform: scale(105%);
+    box-shadow: inset 0px 0px 10px -2px #111;
+}
+
+
+.menu-open-close{
+    font-size: 20px;
+    margin-right: 30px;
+    margin-left: 20px;
+    font-weight: 900;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+/* ==============================================  content section =================================== */
+
+.contaner{
+    width: 100%;
+    /* min-height: 100vh; */
+    /* position: absolute; */
+    z-index: 0;
+  
+    padding: 150px 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+.first-row{
+    padding: 20px 100px;
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.first-photo1{
+    width: 25%;
+    min-width: 303px;
+    height: 100%;
+    padding: 20px;
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+   
+}
+
+.upper-photo1{
+    width: 100%;
+    min-width: 98%;
+    height: 48%;
+    /* background-color: green; */
+    /* padding: 10px; */
+    margin-bottom: 30px;
+}
+
+
+
+
+.center-photo1{
+    width: 50%;
+    min-width: 500px;
+    height: 98%;
+    /* background-color: yellow; */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.third-photo1{
+    width: 25%;
+    min-width: 303px;
+    height: 100%;
+    /* background-color: red; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+/* ===================== second row =========================== */
+
+.second-row{
+    height: 35em;
+    width: 100%;
+    gap: 50px;
+    /* background-color: blue; */
+    margin: 80px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-photo2{
+    width: 35%;
+    height: 100%;
+    min-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    
+    /* background-color: blueviolet; */
+}
+
+/* .upper-photo2{
+    width: 100%;
+    height: 50%;
+    background-color: green;
+} */
+
+
+
+
+
+
+.center-photo2{
+    width: 26%;
+    height: 100%;
+    min-width: 600px;
+    background-color: yellow;
+}
+.third-photo2{
+    width: 35%;
+    height: 100%;
+    min-width: 600px;
+    /* background-color: red; */
+}
+
+
+
+img{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 10px 2px #111;
+    border-radius: 10px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+.navigation .logo {
+    width: 15%;
+    cursor: pointer;
+    mix-blend-mode: darken;
+    box-shadow: none;
+    border: 0;
+    outline: none;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Pop up content part  */
+
+#popup_main{
+    display: none;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: -5;
+    top: 0;
+    left: 0;
+
+}
+
+.popup{
+
+    display: none;
+
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    transform: translate(0%, -50%);
+    padding: 30px;
+    border: 5px solid #000;
+    border-radius: 10px;
+}
+.popup>i{
+    font-size: 22px;
+    cursor: pointer;
+    transition: .2s;
+}
+.popup>i:hover{
+    transform: scale(130%);
+    opacity: 80%;
+}
+
+.popup>h2{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.popup>p{
+    font-size: 16px;
+    font-family: cursive;
+    font-style: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================== footer part ==================== */
+footer{
+    width: 100%;
+    min-height: 60px;
+    background-color: #aaa;
+    
+    padding: 0 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+}
+
+
+/* ================== footer logo ===================== */
+footer>.logo-footer{
+    width: 15%;
+    min-width: 200px;
+    mix-blend-mode: darken;
+    box-shadow: none;
+}
+
+
+/* ========================= Quick links ========================= */
+
+.quick-link{
+    width: 20%;
+    min-width: 300px;
+    height: 60%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quick-link>a{
+    margin: 0 10px;
+}
+
+.quick-link a>img{
+    width: 25px;
+    box-shadow: 0px 2px 10px -2px #111;
+    border-radius: 50%;
+    transition: .2s;
+}
+
+.quick-link a>img:hover{
+    transform: scale(110%);
+    box-shadow: 6px 6px 10px -6px #111;
+    border-radius: 50%;
+}
+
+
+/* =========================== copy-right link/part ===================== */
+
+.copy-right{
+    width: 30%;
+    min-width: 300px;
+    height: 100%;
+    font-size: 13px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 20px;
+}
+
+
+
+.copy-right>p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+
+.copy-right .copyright-icon{
+    width: 15px;
+    margin-right: 5px;
+    box-shadow: none;
+}
+
+/* ====================== footer social link ====================== */
+.social-link{
+    width: 10%;
+    height: 60%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+
+}
+
+.social-link>a{
+    margin: 0 10px;
+}
+
+
+.facebook>img{
+    width: 20px;
+}
+
+.instagram>img{
+    width: 20px;
+}
+
+.youtube>img{
+    width: 20px;
+}
+.social-link a>img{
+     box-shadow: 6px 6px 10px -6px #111;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.social-link a>img:hover{
+    transform: scale(110%);
+    box-shadow: 6px 6px 10px -6px #111;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1000px) {
+    .logo{
+        width: 100px;
+    }
+    .search{
+        width: 100px;
+        display: none;
+    }
+
+   .menu ul{
+    position: absolute;
+    right: 0;
+    top: 75px;
+    display: flex;
+    flex-direction: column;
+    background-color: #aaa;
+    width: 200px;
+    height: fit-content;
+    gap: 15px;
+    padding: 20px;
+    display: none;
+   }
+
+   .menu-open-close{
+    display: block;
+   }
+}
